@@ -1,0 +1,16 @@
+{%extends 'html/org_base.html' %}
+{% block title %}
+    机构讲师
+{% endblock %}
+{% block right_form %}
+    {% for teacher in all_teachers %}
+        <div>
+        <image src = '/media/{{ teacher.image }}'></image>
+        <hr>
+        <p>{{ teacher.name }}</p>
+        <p>工作年限{{ teacher.work_years }}</p>
+        </div>
+
+
+    {% endfor %}
+{% endblock %}
